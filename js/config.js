@@ -2,12 +2,16 @@
 
 i18next
   .use(i18nextXHRBackend)
+  .use(i18nextLocalStorageCache)
   .init({
     "debug": true,
     "lng": "de-DE",
     "fallbackLng": "en",
     "backend": {
       "loadPath": "locales/{{lng}}/{{ns}}.json"
+    },
+    "cache": {
+      "enabled": true
     }
   });
 
